@@ -36,19 +36,20 @@ async def async_setup_entry(
     allow_write = data.get(CONF_ENABLE_WRITE_ENTITIES, DEFAULT_ENABLE_WRITE)
 
     version = coordinator.software_version
-    # No heat-pump write entity at all on firmware without verified write
-    # addresses (H software): SG Ready register 5167 is NWPM-only.
-    if not allow_write or not writes_supported(version):
+    if not allow_write:
         return
 
     host = data.get("host")
     model = data.get("model")
 
-    entities: list[SelectEntity] = [
-        DimplexSGReadySelect(
-            coordinator, entry, allow_write, host=host, software_version=version, model=model
+    entities: list[SelectEntity] = []
+    # SG Ready register 5167 is NWPM-only: never created on H software.
+    if writes_supported(version):
+        entities.append(
+            DimplexSGReadySelect(
+                coordinator, entry, allow_write, host=host, software_version=version, model=model
+            )
         )
-    ]
     entities.extend(
         DimplexWriteSelect(coordinator, entry, ws, host=host, version=version, model=model)
         for ws in coordinator.write_specs
@@ -147,6 +148,8 @@ class DimplexWriteSelect(DimplexEntityMixin, CoordinatorEntity, SelectEntity):
     async def async_select_option(self, option: str) -> None:
         if option not in self._reverse:
             raise HomeAssistantError(f"Invalid option {option}")
+        if not self._ws.raw_allowed(self._reverse[option]):
+            raise HomeAssistantError(f"{self._ws.name}: option {option} is read-only")
         try:
             await self.coordinator.write_register(self._ws.address, self._reverse[option])
         except ModbusException as err:

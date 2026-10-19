@@ -26,9 +26,11 @@ Rules for H (see ``docs/H_SERIES.md``):
 * A plain ``int`` address means "valid for J/L/M". On H it resolves to
   ``None`` (entity not created, register never polled) unless the spec gives
   an explicit ``"H"`` entry in an address dict.
-* Only documented read addresses are mapped. No H write address is mapped,
-  because the manual's H column for writable parameters could not be
-  unambiguously attributed; see :func:`writes_supported`.
+* Only documented read addresses are mapped. H writes use a separate,
+  minimal table (:data:`H_WRITE_REGISTERS`) verified against the original
+  manual layout (§6.3, dedicated ``WPM_H`` column); the NWPM write table
+  (:data:`WRITE_REGISTERS`, SG Ready) never applies to H, see
+  :func:`writes_supported`.
 * H polling reads only contiguous runs of documented addresses
   (no gap bridging), see :func:`read_cluster_gap`.
 """
@@ -537,6 +539,17 @@ class WriteSpec:
     # gating:
     module_flag: str | None = None
     icon: str | None = None
+    # select only: raw codes that may be written (None = every option).
+    writable_codes: frozenset[int] | None = None
+
+    def raw_allowed(self, raw: int) -> bool:
+        """Whether ``raw`` is a value this control may ever send to the device."""
+        if self.kind == KIND_SELECT:
+            codes = self.writable_codes
+            if codes is None:
+                codes = frozenset((self.options_map or {}).keys())
+            return raw in codes
+        return self.to_raw(self.min_value) <= raw <= self.to_raw(self.max_value)
 
     def to_raw(self, display: float) -> int:
         """Clamp the display value to range and encode it to a raw register value."""
@@ -585,14 +598,44 @@ WRITE_REGISTERS: tuple[WriteSpec, ...] = (
 )
 
 
-def writes_supported(version: str | None) -> bool:
-    """Whether any heat-pump write entity may exist for ``version``.
+# WPM 2006/2007 H software (LWPM 410 RTU), FC03 read / FC06 write, uint16.
+# Source: Glen Dimplex "Modbus RTU Anbindung" 08/2023, §6.3 Einstellungen,
+# rows with three printed addresses under the columns
+# "WPM_J bis WPM_L22.9 | ab WPM_L23 WPM_M | WPM_H" (third value = H):
+#   p.19  §6.3.1 Parallelverschiebung   163 | 243 | 129  uint16 R/W 0..38
+#         (p.19-20 code list 0 = -19 K … 19 = 0 K … 38 = +19 K)
+#   p.24  §6.3.3 Betriebsmodus          142 | 222 | 134  uint16 R/W 0..5
+#         (0 Sommer, 1 Auto, 2 Urlaub, 3 Party, 4 2.Wärmeerzeuger, 5 Kühlen)
+#   p.25  §6.3.4 WW Solltemperatur      174 | 254 | 149  uint16 R/W
+#         min "Solltemp. Minimal" (no H address), max 85 °C
+# Integration safety policy (narrower than the manual, see docs/H_SERIES.md):
+# operating mode writes limited to Summer/Auto; DHW setpoint limited to
+# 30..60 °C (integer °C, inferred from uint16 with integer range limits).
+# Every H write is verified by FC03 read-back of the same register.
+H_WRITE_REGISTERS: tuple[WriteSpec, ...] = (
+    WriteSpec("set_operating_mode", 134, "Operating mode", M_CONTROLLER, kind=KIND_SELECT,
+              options_map={0: "Summer", 1: "Auto", 2: "Holiday", 3: "Party",
+                           4: "2nd heat generator", 5: "Cooling"},
+              writable_codes=frozenset({0, 1}), icon="mdi:tune"),
+    WriteSpec("set_hc1_curve_offset", 129, "HC1 curve offset", M_HC1, min_value=-19, max_value=19,
+              step=1, unit="K", encode="offset19", icon="mdi:tune-variant"),
+    WriteSpec("set_dhw_setpoint", 149, "DHW setpoint", M_DHW, min_value=30, max_value=60,
+              step=1, unit="°C", device_class="temperature", icon="mdi:water-thermometer"),
+)
 
-    WRITE_REGISTERS hold NWPM (J/L/M) addresses. No H write address is verified
-    (see docs/H_SERIES.md), so H gets no working write entity at all — not even
-    with the control gate switched on.
+
+def writes_supported(version: str | None) -> bool:
+    """Whether the NWPM write table (incl. SG Ready) applies to ``version``.
+
+    WRITE_REGISTERS hold NWPM (J/L/M) addresses and are never used on H. H has
+    its own verified table, see :func:`h_write_registers`.
     """
     return version != SOFTWARE_H
+
+
+def h_write_registers() -> list[WriteSpec]:
+    """Writable controls for H software (only used behind the control gate)."""
+    return list(H_WRITE_REGISTERS)
 
 
 def active_write_registers(

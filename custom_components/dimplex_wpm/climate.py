@@ -26,7 +26,7 @@ from pymodbus.exceptions import ModbusException
 
 from .const import CONF_ENABLE_WRITE_ENTITIES, DEFAULT_ENABLE_WRITE, DOMAIN
 from .entity import DimplexEntityMixin
-from .registers import M_DHW, M_HC1
+from .registers import M_DHW, M_HC1, SOFTWARE_H
 
 PARALLEL_UPDATES = 1  # serialize writes to the controller
 
@@ -62,6 +62,10 @@ async def async_setup_entry(
     data = hass.data[DOMAIN][entry.entry_id]
     coordinator = data["coordinator"]
     if not data.get(CONF_ENABLE_WRITE_ENTITIES, DEFAULT_ENABLE_WRITE):
+        return
+    # H software: setpoints are exposed only as number entities (one control
+    # per register, verified writes); no thermostat wrapper.
+    if coordinator.software_version == SOFTWARE_H:
         return
 
     write_specs = {ws.key: ws for ws in coordinator.write_specs}

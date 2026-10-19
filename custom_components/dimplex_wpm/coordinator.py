@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 from collections.abc import Callable
 from datetime import timedelta
 import logging
@@ -10,6 +11,7 @@ from typing import Any
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 from homeassistant.util import dt as dt_util
+from pymodbus.exceptions import ModbusException
 
 from . import estimation as est
 from .const import DEFAULT_SCAN_INTERVAL, get_enum_map
@@ -21,12 +23,15 @@ from .registers import (
     CAP_HEAT_METER,
     CAP_INVERTER_FREQ,
     COIL,
+    SOFTWARE_H,
+    WriteSpec,
     active_energy_groups,
     active_registers,
     active_write_registers,
     build_read_plan,
     decode_value,
     energy_total_kwh,
+    h_write_registers,
     read_cluster_gap,
 )
 
@@ -98,11 +103,21 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             version=software_version,
         )
         self.enable_control = enable_control
-        self.write_specs = (
-            active_write_registers(enabled_modules=enabled_modules, version=software_version)
-            if enable_control
-            else []
+        if not enable_control:
+            self.write_specs: list[WriteSpec] = []
+        elif software_version == SOFTWARE_H:
+            self.write_specs = h_write_registers()
+        else:
+            self.write_specs = active_write_registers(
+                enabled_modules=enabled_modules, version=software_version
+            )
+        # H writes are restricted to these registers and verified by read-back.
+        self._h_write_specs = (
+            {ws.address: ws for ws in self.write_specs}
+            if software_version == SOFTWARE_H
+            else {}
         )
+        self._write_lock = asyncio.Lock()
         extra_holding = {ws.address for ws in self.write_specs}
         self._plan = build_read_plan(
             self.specs, self.energy_groups, software_version, extra_holding,
@@ -279,8 +294,45 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
 
     @property
     def write_register(self) -> Callable[[int, int], Any]:
-        """Return helper for writing a holding register (used by M2 controls)."""
+        """Return helper for writing a holding register (used by M2 controls).
+
+        J/L/M: the plain client write (unchanged upstream behaviour).
+        H: :meth:`_write_verified` (allow-list, range check, read-back).
+        """
+        if self.software_version == SOFTWARE_H:
+            return self._write_verified
         return self._client.write_register
+
+    async def _write_verified(self, address: int, value: int) -> None:
+        """Write one H register (FC06) only if allowed, changed, and confirmed.
+
+        Bounded: one pre-read, at most one write, one read-back, no retries.
+        Every failure is raised as ``ModbusException`` (entities turn it into
+        ``HomeAssistantError``). An unchanged value is not rewritten.
+        """
+        ws = self._h_write_specs.get(address)
+        if ws is None:
+            raise ModbusException(f"Register {address} is not a writable H register")
+        if not ws.raw_allowed(value):
+            raise ModbusException(f"Value {value} not allowed for {ws.key} (register {address})")
+        async with self._write_lock:
+            try:
+                before = await self._client.read_holding_registers(address, 1)
+                if not before:
+                    raise ModbusException(f"Pre-write read of register {address} failed")
+                if before[0] == value:
+                    LOGGER.debug("Register %s already %s; write skipped", address, value)
+                    return
+                await self._client.write_register(address, value)
+                after = await self._client.read_holding_registers(address, 1)
+            except (ConnectionError, OSError, TimeoutError) as err:
+                raise ModbusException(f"Write to register {address} failed: {err}") from err
+            if not after or after[0] != value:
+                raise ModbusException(
+                    f"Read-back mismatch at register {address}: wrote {value}, "
+                    f"read {after[0] if after else None}"
+                )
+            LOGGER.info("Wrote H register %s: %s -> %s (verified)", address, before[0], value)
 
     # Backwards-compatible alias used by the SG Ready select.
     @property
