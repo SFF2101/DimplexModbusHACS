@@ -48,7 +48,17 @@ class DimplexModbusClient:
         LOGGER.debug("Connected to Modbus host %s:%s", self._host, self._port)
 
     async def close(self) -> None:
-        """Close the Modbus connection (pymodbus 3.x close() is synchronous)."""
+        """Close the Modbus connection.
+
+        Takes the request lock, so a close requested elsewhere (e.g. after a
+        failed poll) waits for an in-flight request (e.g. a write) to finish
+        instead of cutting it off.
+        """
+        async with self._lock:
+            self._close_unlocked()
+
+    def _close_unlocked(self) -> None:
+        """Close the connection; caller must hold ``self._lock`` (pymodbus 3.x close() is synchronous)."""
         if self._client:
             try:
                 self._client.close()
@@ -115,34 +125,111 @@ class DimplexModbusClient:
                 raise ModbusException(f"Write error: {result}")
             LOGGER.debug("Wrote register %s=%s", address, value)
 
+    async def write_register_single(self, address: int, value: int) -> None:
+        """Write a single holding register with at most ONE FC06 frame on the wire.
+
+        pymodbus retransmits an unanswered request ``retries`` times (default 3).
+        For a write that would repeat the FC06, so library retransmission is
+        disabled for this one request (restored afterwards). If the device does
+        not answer, the connection is closed so a late response can never be
+        matched to a later request; the caller must treat the outcome as
+        unknown and re-read. Refuses to write if retransmission cannot be
+        disabled on the installed pymodbus.
+        """
+        async with self._lock:
+            await self._write_single_unlocked(address, value)
+
+    async def _write_single_unlocked(self, address: int, value: int) -> None:
+        """Body of :meth:`write_register_single`; caller must hold ``self._lock``."""
+        address += REGISTER_OFFSET
+        try:
+            await self._ensure_connected()
+            assert self._client is not None
+            ctx = getattr(self._client, "ctx", None)
+            saved = getattr(ctx, "retries", None)
+            if not isinstance(saved, int) or isinstance(saved, bool):
+                raise ModbusException(
+                    "Cannot disable pymodbus retransmission; write refused"
+                )
+            ctx.retries = 0
+            try:
+                result = await self._client.write_register(
+                    address, value, **self._unit_kwargs(self._client.write_register)
+                )
+            finally:
+                ctx.retries = saved
+        except ModbusException as err:
+            LOGGER.error("Modbus single write failed: %s", err)
+            self._close_unlocked()
+            raise
+        except (ConnectionError, OSError) as err:
+            LOGGER.error("Modbus single write connection failed: %s", err)
+            self._close_unlocked()
+            raise ModbusException(f"Connection failed: {err}") from err
+        if result.isError():
+            raise ModbusException(f"Write error: {result}")
+        LOGGER.debug("Wrote register %s=%s (single frame)", address, value)
+
+    async def write_single_verified(
+        self, address: int, value: int
+    ) -> tuple[int, bool, int | None]:
+        """Pre-read, single-frame FC06 write and read-back under ONE lock hold.
+
+        Nothing else on this client (polls, close/unload) can run between the
+        three steps, so the read-back always uses the same connection as the
+        write and a close waits for the whole sequence. Returns
+        ``(before, written, after)``: ``written`` is False (and ``after`` None)
+        when the register already holds ``value``; ``after`` is None if the
+        read-back got no data. Raises ``ModbusException`` on any failure.
+        """
+        async with self._lock:
+            try:
+                before = await self._read_unlocked("read_holding_registers", address, 1)
+                if not before:
+                    raise ModbusException(f"Pre-write read of register {address} failed")
+                if before[0] == value:
+                    return before[0], False, None
+                await self._write_single_unlocked(address, value)
+                after = await self._read_unlocked("read_holding_registers", address, 1)
+            except (ConnectionError, OSError, TimeoutError) as err:
+                self._close_unlocked()
+                raise ModbusException(f"Write to register {address} failed: {err}") from err
+            return before[0], True, (after[0] if after else None)
+
     async def _read(
         self, method: str, address: int, count: int
     ) -> list[int] | None:
         """Read registers using provided client method."""
         async with self._lock:
-            await self._ensure_connected()
-            try:
-                assert self._client is not None
-                func = getattr(self._client, method)
-                result = await func(
-                    address=address,
-                    count=count,
-                    **self._unit_kwargs(func),
-                )
-            except ModbusException as err:
-                LOGGER.error("Modbus read failed: %s", err)
-                raise
-            if result.isError():
-                LOGGER.warning("Modbus read error for %s at %s: %s", method, address, result)
-                return None
-            LOGGER.debug(
-                "Read %s registers from %s starting at %s: %s",
-                count,
-                method,
-                address,
-                result.registers,
+            return await self._read_unlocked(method, address, count)
+
+    async def _read_unlocked(
+        self, method: str, address: int, count: int
+    ) -> list[int] | None:
+        """Read registers; caller must hold ``self._lock``."""
+        await self._ensure_connected()
+        try:
+            assert self._client is not None
+            func = getattr(self._client, method)
+            result = await func(
+                address=address,
+                count=count,
+                **self._unit_kwargs(func),
             )
-            return result.registers
+        except ModbusException as err:
+            LOGGER.error("Modbus read failed: %s", err)
+            raise
+        if result.isError():
+            LOGGER.warning("Modbus read error for %s at %s: %s", method, address, result)
+            return None
+        LOGGER.debug(
+            "Read %s registers from %s starting at %s: %s",
+            count,
+            method,
+            address,
+            result.registers,
+        )
+        return result.registers
 
     def _unit_kwargs(self, func: Callable[..., Any]) -> dict[str, int]:
         """Return the correct unit-id argument for the pymodbus call.

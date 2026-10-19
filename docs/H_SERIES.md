@@ -87,8 +87,14 @@ Write path on H (`coordinator._write_verified`): the register must be one of
 the three above and the raw value inside the integration range/allowed codes
 (otherwise refused before any bus traffic); one FC03 pre-read (an unchanged
 value is **not** rewritten); one FC06 write to the configured unit id; one FC03
-read-back of the same register — a mismatch raises an error. No retries. No
-write ever happens during setup, startup, polling or option changes; only on an
+read-back of the same register — a mismatch raises an error. No retries:
+pymodbus' own retransmission (default 3) is disabled for the FC06, so one
+action puts at most **one** FC06 frame on the wire; if its response is lost the
+connection is dropped and the outcome is shown by the next poll. Pre-read,
+write and read-back run under one hold of the client lock, and closing the
+connection (failed poll, unload) waits for that sequence; on unload the
+coordinator is shut down first so nothing reconnects. J/L/M writes keep the
+upstream path unchanged. No write ever happens during setup, startup, polling or option changes; only on an
 explicit user/service action. On H no thermostat (climate) and no SG Ready
 entity is created.
 
@@ -155,8 +161,11 @@ must stay outside this integration and needs separate authorisation.
 ## 6. Offline validation (no device)
 
 * `pytest tests` — HA-free unit/regression tests (J/L/M frozen snapshot,
-  H read/write tables, pymodbus mock gateway).
+  H read/write tables, pymodbus mock gateway, wire-level write safety against
+  the fault-injecting raw device `tests/fake_modbus.py`).
 * `pytest tests_ha -o asyncio_mode=auto` — genuine Home Assistant runtime
   (pytest-homeassistant-custom-component): config flow, entry setup,
   coordinator, entity platforms and service calls against an in-process
-  pymodbus TCP server on 127.0.0.1 (sockets restricted to loopback).
+  pymodbus TCP server on 127.0.0.1 (sockets restricted to loopback);
+  `test_ha_write_safety.py` uses the raw fault-injecting device (lost FC06
+  response, delayed response during unload).

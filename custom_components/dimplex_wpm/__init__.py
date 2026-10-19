@@ -117,6 +117,9 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
         data = hass.data[DOMAIN].pop(entry.entry_id)
+        # Stop polling/refresh first, so nothing reconnects after the close.
+        # close() waits for an in-flight request (e.g. a verified write).
+        await data["coordinator"].async_shutdown()
         await data["client"].close()
     return unload_ok
 

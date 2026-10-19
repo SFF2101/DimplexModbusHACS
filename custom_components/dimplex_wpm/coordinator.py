@@ -306,7 +306,10 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
     async def _write_verified(self, address: int, value: int) -> None:
         """Write one H register (FC06) only if allowed, changed, and confirmed.
 
-        Bounded: one pre-read, at most one write, one read-back, no retries.
+        Bounded: one pre-read, at most one FC06 frame (library retransmission
+        disabled), one read-back, no retries — all three under a single hold of
+        the client lock (``DimplexModbusClient.write_single_verified``), so a
+        poll or close/unload cannot interleave or cut the sequence.
         Every failure is raised as ``ModbusException`` (entities turn it into
         ``HomeAssistantError``). An unchanged value is not rewritten.
         """
@@ -317,22 +320,19 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             raise ModbusException(f"Value {value} not allowed for {ws.key} (register {address})")
         async with self._write_lock:
             try:
-                before = await self._client.read_holding_registers(address, 1)
-                if not before:
-                    raise ModbusException(f"Pre-write read of register {address} failed")
-                if before[0] == value:
-                    LOGGER.debug("Register %s already %s; write skipped", address, value)
-                    return
-                await self._client.write_register(address, value)
-                after = await self._client.read_holding_registers(address, 1)
+                before, written, after = await self._client.write_single_verified(
+                    address, value
+                )
             except (ConnectionError, OSError, TimeoutError) as err:
                 raise ModbusException(f"Write to register {address} failed: {err}") from err
-            if not after or after[0] != value:
+            if not written:
+                LOGGER.debug("Register %s already %s; write skipped", address, value)
+                return
+            if after != value:
                 raise ModbusException(
-                    f"Read-back mismatch at register {address}: wrote {value}, "
-                    f"read {after[0] if after else None}"
+                    f"Read-back mismatch at register {address}: wrote {value}, read {after}"
                 )
-            LOGGER.info("Wrote H register %s: %s -> %s (verified)", address, before[0], value)
+            LOGGER.info("Wrote H register %s: %s -> %s (verified)", address, before, value)
 
     # Backwards-compatible alias used by the SG Ready select.
     @property
