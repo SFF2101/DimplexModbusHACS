@@ -51,6 +51,11 @@ CONF_TIMEOUT: Final = "timeout"
 CONF_SOFTWARE_VERSION: Final = "software_version"
 # Master gate for control/write entities (M2). Calibration numbers are NOT gated.
 CONF_ENABLE_WRITE_ENTITIES: Final = "enable_write_entities"
+# H software only: opt-in for the read-only runtime counters (FC03) and
+# input/output coils (FC01) documented in the LWPM 410 manual §6.2/§6.6/§6.7.
+# Default OFF so an existing H entry keeps its original polling until enabled.
+CONF_H_EXTENDED_MONITORING: Final = "h_extended_monitoring"
+DEFAULT_H_EXTENDED_MONITORING: Final = False
 
 SOFTWARE_VERSIONS: Final = ["H", "J", "L", "M"]
 

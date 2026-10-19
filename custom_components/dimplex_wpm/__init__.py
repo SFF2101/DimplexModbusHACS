@@ -13,6 +13,7 @@ from .const import (
     CONF_ENABLE_WRITE_ENTITIES,
     CONF_ENABLED_MODULES,
     CONF_FLOW_SENSOR_ENTITY,
+    CONF_H_EXTENDED_MONITORING,
     CONF_INCLUDE_RE_REGISTERS,
     CONF_PROFILE,
     CONF_SCAN_INTERVAL,
@@ -20,6 +21,7 @@ from .const import (
     CONF_TIMEOUT,
     CONF_UNIT_ID,
     DEFAULT_ENABLE_WRITE,
+    DEFAULT_H_EXTENDED_MONITORING,
     DEFAULT_PROFILE,
     DEFAULT_SCAN_INTERVAL,
     DEFAULT_SOFTWARE_VERSION,
@@ -73,6 +75,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         CONF_INCLUDE_RE_REGISTERS, CAP_INVERTER_FREQ in capabilities
     )
     enable_control = entry.options.get(CONF_ENABLE_WRITE_ENTITIES, DEFAULT_ENABLE_WRITE)
+    # H-only opt-in (options flow); ignored for J/L/M by the register table.
+    h_extended = bool(
+        entry.options.get(CONF_H_EXTENDED_MONITORING, DEFAULT_H_EXTENDED_MONITORING)
+    )
 
     client = DimplexModbusClient(host, port, unit_id, timeout)
     coordinator = DimplexDataUpdateCoordinator(
@@ -86,6 +92,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         profile=profile,
         flow_sensor_entity=source.get(CONF_FLOW_SENSOR_ENTITY) or None,
         enable_control=enable_control,
+        h_extended=h_extended,
         host=host,
         port=port,
         unit_id=unit_id,

@@ -49,17 +49,21 @@ def free_port() -> int:
 
 
 class SimGateway:
-    def __init__(self, dimplex=None, decoy=None, ignore_writes=False):
+    def __init__(self, dimplex=None, decoy=None, ignore_writes=False, coils=None):
         """``ignore_writes``: the device acknowledges FC06 but keeps its old value
         (as a controller that rejects/clamps silently would) -> read-back mismatch.
+        ``coils``: optional {address: bool} coil map for unit 2 (FC01 reads).
         """
         self.port = free_port()
         self.requests: list[tuple[int, int, int | None]] = []
         self.ignore_writes = ignore_writes
         # Shadow of unit 2's holding registers (kept in step with the server).
         self.values = dict(H_VALUES if dimplex is None else dimplex)
+        dimplex_ctx = {"hr": ModbusSparseDataBlock(dict(self.values))}
+        if coils is not None:
+            dimplex_ctx["co"] = ModbusSparseDataBlock(dict(coils))
         devices = {
-            UNIT_DIMPLEX: ModbusDeviceContext(hr=ModbusSparseDataBlock(dict(self.values))),
+            UNIT_DIMPLEX: ModbusDeviceContext(**dimplex_ctx),
             UNIT_DECOY: ModbusDeviceContext(
                 hr=ModbusSparseDataBlock(dict(DECOY_VALUES if decoy is None else decoy))
             ),

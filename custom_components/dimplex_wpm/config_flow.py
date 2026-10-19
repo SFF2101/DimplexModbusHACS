@@ -14,6 +14,7 @@ from .const import (
     CONF_ENABLE_WRITE_ENTITIES,
     CONF_ENABLED_MODULES,
     CONF_FLOW_SENSOR_ENTITY,
+    CONF_H_EXTENDED_MONITORING,
     CONF_HAS_ELECTRIC_METER,
     CONF_HAS_FLOW_SENSOR,
     CONF_HAS_HEAT_METER,
@@ -25,6 +26,7 @@ from .const import (
     CONF_TIMEOUT,
     CONF_UNIT_ID,
     DEFAULT_ENABLE_WRITE,
+    DEFAULT_H_EXTENDED_MONITORING,
     DEFAULT_PORT,
     DEFAULT_PROFILE,
     DEFAULT_SCAN_INTERVAL,
@@ -42,6 +44,7 @@ from .registers import (
     CAP_ELECTRIC_METER,
     CAP_HEAT_METER,
     CAP_INVERTER_FREQ,
+    SOFTWARE_H,
     capability_probes,
     connection_probe_address,
 )
@@ -214,4 +217,16 @@ class DimplexOptionsFlow(config_entries.OptionsFlow):
                 ): bool,
             }
         )
+        # H software only: read-only runtimes + input/output coils (default OFF).
+        if self._current(CONF_SOFTWARE_VERSION, DEFAULT_SOFTWARE_VERSION) == SOFTWARE_H:
+            schema = schema.extend(
+                {
+                    vol.Optional(
+                        CONF_H_EXTENDED_MONITORING,
+                        default=self._current(
+                            CONF_H_EXTENDED_MONITORING, DEFAULT_H_EXTENDED_MONITORING
+                        ),
+                    ): bool,
+                }
+            )
         return self.async_show_form(step_id="init", data_schema=schema)

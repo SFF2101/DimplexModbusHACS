@@ -33,6 +33,9 @@ Rules for H (see ``docs/H_SERIES.md``):
   :func:`writes_supported`.
 * H polling reads only contiguous runs of documented addresses
   (no gap bridging), see :func:`read_cluster_gap`.
+* H runtimes (§6.2) and input/output coils (§6.6/§6.7) are marked
+  ``h_opt_in``: on H they are created and polled only when the
+  "H runtimes and I/O states" option is enabled (default OFF).
 """
 
 from __future__ import annotations
@@ -116,6 +119,9 @@ class RegisterSpec:
     re_only: bool = False  # reverse-engineered (not in official spec)
     icon: str | None = None
     name: str | None = None
+    # H only: polled/created on H software only when the user enabled the
+    # "H runtimes and I/O states" option (default OFF). No effect on J/L/M.
+    h_opt_in: bool = False
 
     def resolve_address(self, version: str) -> int | None:
         """Return the register address for ``version`` (None if N/A).
@@ -220,18 +226,24 @@ REGISTERS: tuple[RegisterSpec, ...] = (
         icon="mdi:thermometer-alert",
     ),
     # ===== Runtimes (diagnostic, hours, total_increasing) =====
-    RegisterSpec("runtime_compressor_1", 72, unit="h", state_class="total_increasing",
-                 entity_category="diagnostic", module=M_CONTROLLER, name="Compressor 1 runtime", icon="mdi:timer-cog"),
+    # H addresses (P1, opt-in): LWPM 410 manual 08/2023 §6.2 Historie p. 17,
+    # WPM_H column: 64 / 66 / 68 / 69, uint16 Register R, unit h.
+    RegisterSpec("runtime_compressor_1", _v(72, 64), unit="h", state_class="total_increasing",
+                 entity_category="diagnostic", module=M_CONTROLLER, name="Compressor 1 runtime", icon="mdi:timer-cog",
+                 h_opt_in=True),
     RegisterSpec("runtime_compressor_2", 73, unit="h", state_class="total_increasing",
                  entity_category="diagnostic", module=M_CONTROLLER, name="Compressor 2 runtime", icon="mdi:timer-cog"),
-    RegisterSpec("runtime_primary_pump", 74, unit="h", state_class="total_increasing",
-                 entity_category="diagnostic", module=M_CONTROLLER, name="Primary pump / fan runtime", icon="mdi:timer-cog"),
+    RegisterSpec("runtime_primary_pump", _v(74, 66), unit="h", state_class="total_increasing",
+                 entity_category="diagnostic", module=M_CONTROLLER, name="Primary pump / fan runtime", icon="mdi:timer-cog",
+                 h_opt_in=True),
     RegisterSpec("runtime_2nd_heat_generator", 75, unit="h", state_class="total_increasing",
                  entity_category="diagnostic", module=M_CONTROLLER, name="2nd heat generator runtime", icon="mdi:timer-cog"),
-    RegisterSpec("runtime_heating_pump_m13", 76, unit="h", state_class="total_increasing",
-                 entity_category="diagnostic", module=M_HC1, name="Heating pump M13 runtime", icon="mdi:timer-cog"),
-    RegisterSpec("runtime_dhw_pump", 77, unit="h", state_class="total_increasing",
-                 entity_category="diagnostic", module=M_DHW, name="DHW pump runtime", icon="mdi:timer-cog"),
+    RegisterSpec("runtime_heating_pump_m13", _v(76, 68), unit="h", state_class="total_increasing",
+                 entity_category="diagnostic", module=M_HC1, name="Heating pump M13 runtime", icon="mdi:timer-cog",
+                 h_opt_in=True),
+    RegisterSpec("runtime_dhw_pump", _v(77, 69), unit="h", state_class="total_increasing",
+                 entity_category="diagnostic", module=M_DHW, name="DHW pump runtime", icon="mdi:timer-cog",
+                 h_opt_in=True),
     RegisterSpec("runtime_immersion_heater", 78, unit="h", state_class="total_increasing",
                  entity_category="diagnostic", module=M_CONTROLLER, name="Immersion heater runtime", icon="mdi:timer-cog"),
     RegisterSpec("runtime_pool_pump", 79, unit="h", state_class="total_increasing",
@@ -307,24 +319,34 @@ REGISTERS: tuple[RegisterSpec, ...] = (
                  module=M_CONTROLLER, name="SmartGrid input 1"),
     RegisterSpec("smartgrid_input_2", 4, obj=COIL, entity_category="diagnostic",
                  module=M_CONTROLLER, name="SmartGrid input 2"),
-    RegisterSpec("utility_lockout", 5, obj=COIL, device_class="lock",
-                 entity_category="diagnostic", module=M_CONTROLLER, name="Utility (EVU) lockout"),
-    RegisterSpec("external_lockout", 6, obj=COIL, device_class="lock",
-                 entity_category="diagnostic", module=M_CONTROLLER, name="External lockout"),
+    # H addresses (P1, opt-in): manual 08/2023 §6.6 Eingänge p. 44-45, WPM_H
+    # column: EVU-Sperre 56, Sperre Extern 63, boolean Coil R (FC01).
+    RegisterSpec("utility_lockout", _v(5, 56), obj=COIL, device_class="lock",
+                 entity_category="diagnostic", module=M_CONTROLLER, name="Utility (EVU) lockout",
+                 h_opt_in=True),
+    RegisterSpec("external_lockout", _v(6, 63), obj=COIL, device_class="lock",
+                 entity_category="diagnostic", module=M_CONTROLLER, name="External lockout",
+                 h_opt_in=True),
 
     # ===== Coils — digital outputs (diagnostic, running indicators) =====
-    RegisterSpec("output_compressor_1", 41, obj=COIL, device_class="running",
-                 entity_category="diagnostic", module=M_CONTROLLER, name="Compressor 1"),
+    # H addresses (P1, opt-in): manual 08/2023 §6.7 Ausgänge p. 45, WPM_H
+    # column: 80 / 82 / 84 / 85, boolean Coil R (FC01).
+    RegisterSpec("output_compressor_1", _v(41, 80), obj=COIL, device_class="running",
+                 entity_category="diagnostic", module=M_CONTROLLER, name="Compressor 1",
+                 h_opt_in=True),
     RegisterSpec("output_compressor_2", 42, obj=COIL, device_class="running",
                  entity_category="diagnostic", module=M_CONTROLLER, name="Compressor 2"),
-    RegisterSpec("output_primary_pump", 43, obj=COIL, device_class="running",
-                 entity_category="diagnostic", module=M_CONTROLLER, name="Primary pump / fan"),
+    RegisterSpec("output_primary_pump", _v(43, 82), obj=COIL, device_class="running",
+                 entity_category="diagnostic", module=M_CONTROLLER, name="Primary pump / fan",
+                 h_opt_in=True),
     RegisterSpec("output_2nd_heat_generator", 44, obj=COIL, device_class="running",
                  entity_category="diagnostic", module=M_CONTROLLER, name="2nd heat generator"),
-    RegisterSpec("output_heating_pump_m13", 45, obj=COIL, device_class="running",
-                 entity_category="diagnostic", module=M_HC1, name="Heating pump M13"),
-    RegisterSpec("output_dhw_pump", 46, obj=COIL, device_class="running",
-                 entity_category="diagnostic", module=M_DHW, name="DHW pump"),
+    RegisterSpec("output_heating_pump_m13", _v(45, 84), obj=COIL, device_class="running",
+                 entity_category="diagnostic", module=M_HC1, name="Heating pump M13",
+                 h_opt_in=True),
+    RegisterSpec("output_dhw_pump", _v(46, 85), obj=COIL, device_class="running",
+                 entity_category="diagnostic", module=M_DHW, name="DHW pump",
+                 h_opt_in=True),
     RegisterSpec("output_mixer_m21_open", 47, obj=COIL, entity_category="diagnostic",
                  module=M_HC2_3, module_flag=M_HC2_3, name="Mixer M21 open"),
     RegisterSpec("output_mixer_m21_close", 48, obj=COIL, entity_category="diagnostic",
@@ -373,9 +395,16 @@ def is_spec_active(
     enabled_modules: frozenset[str],
     capabilities: frozenset[str],
     include_re: bool,
+    h_extended: bool = False,
 ) -> bool:
-    """Return True if ``spec`` should produce an entity for this config."""
+    """Return True if ``spec`` should produce an entity for this config.
+
+    ``h_extended`` is the H-only "runtimes and I/O states" opt-in; it never
+    affects J/L/M.
+    """
     if spec.resolve_address(version) is None:
+        return False
+    if version == SOFTWARE_H and spec.h_opt_in and not h_extended:
         return False
     if spec.re_only and not include_re:
         return False
@@ -392,6 +421,7 @@ def active_registers(
     enabled_modules: frozenset[str],
     capabilities: frozenset[str],
     include_re: bool,
+    h_extended: bool = False,
 ) -> list[RegisterSpec]:
     """Return register specs active for the given configuration."""
     return [
@@ -399,6 +429,7 @@ def active_registers(
         if is_spec_active(
             s, version=version, enabled_modules=enabled_modules,
             capabilities=capabilities, include_re=include_re,
+            h_extended=h_extended,
         )
     ]
 

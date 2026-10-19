@@ -49,7 +49,8 @@
           "flow_sensor_entity": "Encja czujnika przepływu (opcjonalnie)",
           "has_inverter_freq": "Dostępna częstotliwość inwertera (rejestr 114)",
           "include_re_registers": "Dołącz rejestry z reverse engineeringu",
-          "enable_write_entities": "Włącz encje sterujące / zapis (zaawansowane)"
+          "enable_write_entities": "Włącz encje sterujące / zapis (zaawansowane)",
+          "h_extended_monitoring": "Oprogramowanie H: odczyt czasów pracy i stanów wejść/wyjść (dodatkowy odczyt FC03/FC01)"
         }
       }
     }

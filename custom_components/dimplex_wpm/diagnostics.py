@@ -33,6 +33,7 @@ async def async_get_config_entry_diagnostics(
             "capabilities": sorted(coordinator.capabilities),
             "estimation_possible": coordinator.estimation_possible,
             "enable_control": coordinator.enable_control,
+            "h_extended_monitoring": coordinator.h_extended,
             "active_register_count": len(coordinator.specs),
             "energy_groups": [g.key for g in coordinator.energy_groups],
             "write_specs": [w.key for w in coordinator.write_specs],

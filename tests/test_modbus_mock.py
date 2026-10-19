@@ -53,11 +53,17 @@ def _free_port() -> int:
 
 
 class MockGateway:
-    def __init__(self, dimplex=None, decoy=None):
+    def __init__(self, dimplex=None, decoy=None, coils=None):
+        """``coils``: optional {address: bool} coil map for unit 2 (FC01)."""
         self.port = _free_port()
         self.requests: list[tuple[int, int]] = []  # (device_id, function_code)
+        # (device_id, function_code, address, count) for read-plan assertions.
+        self.reads: list[tuple[int, int, int | None, int | None]] = []
+        dimplex_ctx = {"hr": ModbusSparseDataBlock(dict(dimplex or H_VALUES))}
+        if coils is not None:
+            dimplex_ctx["co"] = ModbusSparseDataBlock(dict(coils))
         devices = {
-            UNIT_DIMPLEX: ModbusDeviceContext(hr=ModbusSparseDataBlock(dict(dimplex or H_VALUES))),
+            UNIT_DIMPLEX: ModbusDeviceContext(**dimplex_ctx),
             UNIT_DECOY: ModbusDeviceContext(hr=ModbusSparseDataBlock(dict(decoy or DECOY_VALUES))),
         }
         self.server = ModbusTcpServer(
@@ -70,6 +76,8 @@ class MockGateway:
     def _trace(self, sending, pdu):
         if not sending:
             self.requests.append((pdu.dev_id, pdu.function_code))
+            self.reads.append((pdu.dev_id, pdu.function_code,
+                               getattr(pdu, "address", None), getattr(pdu, "count", None)))
         return pdu
 
     async def __aenter__(self):

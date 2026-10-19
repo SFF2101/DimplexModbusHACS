@@ -54,6 +54,7 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         profile: DeviceProfile,
         flow_sensor_entity: str | None = None,
         enable_control: bool = False,
+        h_extended: bool = False,
         host: str | None = None,
         port: int | None = None,
         unit_id: int | None = None,
@@ -92,11 +93,13 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         self._prev_delta_t_ts = None
         self._flow_ema: float | None = None
 
+        self.h_extended = h_extended
         self.specs = active_registers(
             version=software_version,
             enabled_modules=enabled_modules,
             capabilities=capabilities,
             include_re=include_re,
+            h_extended=h_extended,
         )
         self.energy_groups = active_energy_groups(
             enabled_modules=enabled_modules, capabilities=capabilities,
