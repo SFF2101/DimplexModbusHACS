@@ -145,13 +145,21 @@ class DimplexModbusClient:
             return result.registers
 
     def _unit_kwargs(self, func: Callable[..., Any]) -> dict[str, int]:
-        """Return the correct unit/slave argument for the pymodbus call."""
+        """Return the correct unit-id argument for the pymodbus call.
+
+        pymodbus renamed the argument over time: ``unit`` (<3.0), ``slave``
+        (3.0-3.9) and ``device_id`` (3.10+). Without a match the request would
+        silently go to the library default unit 1 — on a shared RTU gateway that
+        is a *different device* — so an unknown signature is an error.
+        """
         params = inspect.signature(func).parameters
-        if "unit" in params:
-            return {"unit": self._unit_id}
-        if "slave" in params:
-            return {"slave": self._unit_id}
-        return {}
+        for name in ("device_id", "slave", "unit"):
+            if name in params:
+                return {name: self._unit_id}
+        raise TypeError(
+            f"Cannot pass Modbus unit id to {getattr(func, '__name__', func)}: "
+            "unsupported pymodbus signature"
+        )
 
     async def read_ranges(
         self,
@@ -171,3 +179,72 @@ class DimplexModbusClient:
             for offset, value in enumerate(data):
                 values[start + offset] = value
         return values
+
+
+async def execute_read_plan(
+    client: DimplexModbusClient,
+    plan: Iterable[tuple[str, int, int]],
+) -> tuple[dict[int, int], dict[int, bool], int]:
+    """Execute ``(obj, start, count)`` reads, tolerating per-chunk failures.
+
+    Returns ``(holding, coils, failed_chunks)``. A chunk that answers with a
+    Modbus exception (e.g. illegal address on an unsupported register) or that
+    times out is skipped, so the remaining registers still update. If *every*
+    chunk failed, the connection is closed (forcing a clean reconnect on the
+    next poll) and ``ConnectionError`` is raised so the caller marks the update
+    failed. Read-only: this never writes.
+    """
+    holding: dict[int, int] = {}
+    coils: dict[int, bool] = {}
+    chunks = list(plan)
+    failed = 0
+    for obj, start, count in chunks:
+        try:
+            if obj == "holding":
+                data = await client.read_holding_registers(start, count)
+                if data:
+                    for offset, value in enumerate(data):
+                        holding[start + offset] = value
+                else:
+                    failed += 1
+            else:
+                bits = await client.read_coils(start, count)
+                if bits:
+                    for offset, value in enumerate(bits):
+                        coils[start + offset] = bool(value)
+                else:
+                    failed += 1
+        except (TimeoutError, ModbusException, ConnectionError, OSError) as err:
+            failed += 1
+            LOGGER.debug("Read of %s %s+%s failed: %s", obj, start, count, err)
+    if chunks and failed == len(chunks):
+        await client.close()
+        raise ConnectionError(f"All {failed} Modbus read requests failed")
+    return holding, coils, failed
+
+
+async def probe_device(
+    client: DimplexModbusClient,
+    probe_address: int,
+    capability_probes: dict[str, int],
+) -> dict[str, bool]:
+    """Validate the connection and probe optional capabilities (read-only).
+
+    Reads ``probe_address`` (a documented register for the selected software
+    version); raises ``ConnectionError`` if it does not answer. Each entry of
+    ``capability_probes`` (name -> register) is read once; any failure means
+    "absent". Pass an empty dict to skip probing (H software).
+    """
+    hints: dict[str, bool] = {}
+    try:
+        await client.connect()
+        if await client.read_holding_registers(probe_address, 1) is None:
+            raise ConnectionError("No response from device")
+        for name, reg in capability_probes.items():
+            try:
+                hints[name] = await client.read_holding_registers(reg, 1) is not None
+            except Exception:  # noqa: BLE001 - a probe failure just means "absent"
+                hints[name] = False
+    finally:
+        await client.close()
+    return hints

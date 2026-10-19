@@ -36,14 +36,21 @@ from .const import (
     SELECTABLE_MODULES,
     SOFTWARE_VERSIONS,
 )
-from .modbus_client import DimplexModbusClient
+from .modbus_client import DimplexModbusClient, probe_device
 from .profiles import PROFILES, get_profile
+from .registers import (
+    CAP_ELECTRIC_METER,
+    CAP_HEAT_METER,
+    CAP_INVERTER_FREQ,
+    capability_probes,
+    connection_probe_address,
+)
 
-REG_OUTDOOR = 1
-PROBE_REGISTERS = {
-    CONF_HAS_ELECTRIC_METER: 5170,
-    CONF_HAS_HEAT_METER: 5168,
-    CONF_HAS_INVERTER_FREQ: 114,
+# Capability -> config key for the auto-hinted feature toggles.
+_PROBE_CONF_KEYS = {
+    CAP_ELECTRIC_METER: CONF_HAS_ELECTRIC_METER,
+    CAP_HEAT_METER: CONF_HAS_HEAT_METER,
+    CAP_INVERTER_FREQ: CONF_HAS_INVERTER_FREQ,
 }
 
 PROFILE_CHOICES = {key: profile.name for key, profile in PROFILES.items()}
@@ -51,26 +58,22 @@ MODULE_CHOICES = {mod: MODULE_NAME_MAP.get(mod, mod) for mod in SELECTABLE_MODUL
 
 
 async def _validate_and_probe(user_input: dict) -> dict[str, bool]:
-    """Validate the connection (holding read) and probe capability hints."""
+    """Validate the connection (holding read) and probe capability hints.
+
+    The validation register depends on the selected software version (outdoor
+    temperature: 1 on J/L/M, 27 on H). Capability probes are NWPM registers and
+    are skipped on H, where every hint defaults to absent.
+    """
+    version = user_input.get(CONF_SOFTWARE_VERSION, DEFAULT_SOFTWARE_VERSION)
     client = DimplexModbusClient(
         user_input[CONF_HOST],
         user_input[CONF_PORT],
         user_input[CONF_UNIT_ID],
         user_input[CONF_TIMEOUT],
     )
-    hints: dict[str, bool] = {}
-    try:
-        await client.connect()
-        if await client.read_holding_registers(REG_OUTDOOR, 1) is None:
-            raise ConnectionError("No response from device")
-        for conf_key, reg in PROBE_REGISTERS.items():
-            try:
-                hints[conf_key] = await client.read_holding_registers(reg, 1) is not None
-            except Exception:  # noqa: BLE001 - a probe failure just means "absent"
-                hints[conf_key] = False
-    finally:
-        await client.close()
-    return hints
+    probes = capability_probes(version)
+    found = await probe_device(client, connection_probe_address(version), probes)
+    return {conf: found.get(cap, False) for cap, conf in _PROBE_CONF_KEYS.items()}
 
 
 class DimplexConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):

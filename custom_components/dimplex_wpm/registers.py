@@ -15,6 +15,22 @@ Dimplex NWPM Modbus TCP wiki). Key facts encoded here:
   (see :class:`EnergyGroup`).
 * Real power/energy registers exist only on metered installs → gated by
   ``capability`` so estimation can take over when absent (M1).
+
+WPM 2006/2007 **H software** (e.g. WPM_H_H54 with an LWPM 410 Modbus RTU card)
+uses a different, much smaller register map. It is sourced from the Glen
+Dimplex manual "Modbus RTU Anbindung — Projektierungs- und
+Installationshandbuch", version 08/2023, chapter 6 (Datenpunktliste), plus the
+official wiki's Systemstatus table (status/lock/fault addresses per version).
+Rules for H (see ``docs/H_SERIES.md``):
+
+* A plain ``int`` address means "valid for J/L/M". On H it resolves to
+  ``None`` (entity not created, register never polled) unless the spec gives
+  an explicit ``"H"`` entry in an address dict.
+* Only documented read addresses are mapped. No H write address is mapped,
+  because the manual's H column for writable parameters could not be
+  unambiguously attributed; see :func:`writes_supported`.
+* H polling reads only contiguous runs of documented addresses
+  (no gap bridging), see :func:`read_cluster_gap`.
 """
 
 from __future__ import annotations
@@ -65,6 +81,18 @@ MAX_READ_CHUNK = 100
 # Split a cluster when the address gap exceeds this (keeps reads tight).
 CLUSTER_GAP = 8
 
+# ----- firmware (WPM software) families -----------------------------------
+SOFTWARE_H = "H"
+# Versions whose register map the plain-int addresses below were written for.
+JLM_VERSIONS = ("J", "L", "M")
+
+
+def _v(jlm: int | None, h: int | None = None) -> dict[str, int | None]:
+    """Address dict: same address on J/L/M, explicit (or no) address on H."""
+    out: dict[str, int | None] = {ver: jlm for ver in JLM_VERSIONS}
+    out[SOFTWARE_H] = h
+    return out
+
 
 @dataclass(frozen=True)
 class RegisterSpec:
@@ -88,9 +116,15 @@ class RegisterSpec:
     name: str | None = None
 
     def resolve_address(self, version: str) -> int | None:
-        """Return the register address for ``version`` (None if N/A)."""
+        """Return the register address for ``version`` (None if N/A).
+
+        Plain-int addresses are J/L/M addresses; H firmware has its own map, so
+        an int never resolves on H (H must be given explicitly in a dict).
+        """
         if isinstance(self.address, dict):
             return self.address.get(version)
+        if version == SOFTWARE_H:
+            return None
         return self.address
 
 
@@ -125,8 +159,10 @@ def _temp(key, address, module, name, *, category=None, flag=None, cap=None, re=
 
 
 REGISTERS: tuple[RegisterSpec, ...] = (
+    # H addresses (second arg of _v) are from the LWPM 410 manual 08/2023 §6.1
+    # Betriebsdaten; all other plain-int specs are J/L/M-only (None on H).
     # ===== Controller: ambient, mode, diagnostics =====
-    _temp("outdoor_temperature", 1, M_CONTROLLER, "Outdoor temperature"),
+    _temp("outdoor_temperature", _v(1, 27), M_CONTROLLER, "Outdoor temperature"),
     RegisterSpec(
         "inverter_frequency", 114, scale=0.1, unit="Hz", device_class="frequency",
         state_class="measurement", entity_category="diagnostic",
@@ -202,9 +238,9 @@ REGISTERS: tuple[RegisterSpec, ...] = (
                  entity_category="diagnostic", module=M_CONTROLLER, name="Auxiliary circulation pump runtime", icon="mdi:timer-cog"),
 
     # ===== HC1 =====
-    _temp("flow_temperature", 5, M_HC1, "Flow temperature"),
-    _temp("return_temperature", 2, M_HC1, "Return temperature"),
-    _temp("return_setpoint_temperature", 53, M_HC1, "Return setpoint temperature", category="diagnostic"),
+    _temp("flow_temperature", _v(5, 31), M_HC1, "Flow temperature"),
+    _temp("return_temperature", _v(2, 29), M_HC1, "Return temperature"),
+    _temp("return_setpoint_temperature", _v(53, 28), M_HC1, "Return setpoint temperature", category="diagnostic"),
     _temp("room_temperature_1", 11, M_HC1, "Room temperature 1"),
     _temp("room_temperature_2", 12, M_HC1, "Room temperature 2"),
     RegisterSpec("room_humidity_1", 13, signed=True, scale=0.1, unit="%",
@@ -213,18 +249,18 @@ REGISTERS: tuple[RegisterSpec, ...] = (
                  device_class="humidity", state_class="measurement", module=M_HC1, name="Room humidity 2"),
 
     # ===== HC2/3 (optional) =====
-    _temp("hc2_temperature", 9, M_HC2_3, "HC2 temperature", flag=M_HC2_3),
-    _temp("hc2_setpoint_temperature", 54, M_HC2_3, "HC2 setpoint temperature", category="diagnostic", flag=M_HC2_3),
+    _temp("hc2_temperature", _v(9, 33), M_HC2_3, "HC2 temperature", flag=M_HC2_3),
+    _temp("hc2_setpoint_temperature", _v(54, 32), M_HC2_3, "HC2 setpoint temperature", category="diagnostic", flag=M_HC2_3),
     _temp("hc3_temperature", 10, M_HC2_3, "HC3 temperature", flag=M_HC2_3),
     _temp("hc3_setpoint_temperature", 55, M_HC2_3, "HC3 setpoint temperature", category="diagnostic", flag=M_HC2_3),
 
     # ===== DHW =====
-    _temp("dhw_temperature", 3, M_DHW, "DHW temperature"),
-    _temp("dhw_setpoint_temperature", 58, M_DHW, "DHW setpoint temperature", category="diagnostic"),
+    _temp("dhw_temperature", _v(3, 30), M_DHW, "DHW temperature"),
+    _temp("dhw_setpoint_temperature", _v(58, 40), M_DHW, "DHW setpoint temperature", category="diagnostic"),
 
     # ===== Source =====
     _temp("source_inlet_temperature", 6, M_SOURCE, "Source inlet temperature"),
-    _temp("source_outlet_temperature", 7, M_SOURCE, "Source outlet temperature"),
+    _temp("source_outlet_temperature", _v(7, 41), M_SOURCE, "Source outlet temperature"),
 
     # ===== Passive cooling (optional) =====
     _temp("cooling_flow_temperature", 19, M_COOLING, "Flow temperature", flag=M_COOLING),
@@ -367,8 +403,14 @@ def active_registers(
 
 def active_energy_groups(
     *, enabled_modules: frozenset[str], capabilities: frozenset[str],
+    version: str | None = None,
 ) -> list[EnergyGroup]:
-    """Return energy groups readable for the given configuration."""
+    """Return energy groups readable for the given configuration.
+
+    The 5096-5129 counters are not documented for H software → none on H.
+    """
+    if version == SOFTWARE_H:
+        return []
     groups = []
     for g in ENERGY_GROUPS:
         if g.capability not in capabilities:
@@ -379,11 +421,21 @@ def active_energy_groups(
     return groups
 
 
+def read_cluster_gap(version: str) -> int:
+    """Max address gap bridged by one read for ``version``.
+
+    On H only strictly contiguous documented addresses share a request, so no
+    undocumented register is ever read to fill a gap.
+    """
+    return 1 if version == SOFTWARE_H else CLUSTER_GAP
+
+
 def build_read_plan(
     specs: list[RegisterSpec],
     energy_groups: list[EnergyGroup],
     version: str,
     extra_holding: set[int] | None = None,
+    cluster_gap: int | None = None,
 ) -> list[tuple[str, int, int]]:
     """Cluster the needed addresses into ``(obj, start, count)`` read chunks.
 
@@ -402,21 +454,22 @@ def build_read_plan(
     for g in energy_groups:
         holding.update(g.registers)
 
+    gap = CLUSTER_GAP if cluster_gap is None else cluster_gap
     plan: list[tuple[str, int, int]] = []
     for obj, addresses in ((HOLDING, holding), (COIL, coils)):
-        for start, count in _cluster(sorted(addresses)):
+        for start, count in _cluster(sorted(addresses), gap):
             plan.append((obj, start, count))
     return plan
 
 
-def _cluster(addresses: list[int]) -> list[tuple[int, int]]:
+def _cluster(addresses: list[int], gap: int = CLUSTER_GAP) -> list[tuple[int, int]]:
     """Turn a sorted address list into (start, count) chunks."""
     chunks: list[tuple[int, int]] = []
     if not addresses:
         return chunks
     start = prev = addresses[0]
     for addr in addresses[1:]:
-        if addr - prev > CLUSTER_GAP or (addr - start + 1) > MAX_READ_CHUNK:
+        if addr - prev > gap or (addr - start + 1) > MAX_READ_CHUNK:
             chunks.append((start, prev - start + 1))
             start = addr
         prev = addr
@@ -532,13 +585,58 @@ WRITE_REGISTERS: tuple[WriteSpec, ...] = (
 )
 
 
+def writes_supported(version: str | None) -> bool:
+    """Whether any heat-pump write entity may exist for ``version``.
+
+    WRITE_REGISTERS hold NWPM (J/L/M) addresses. No H write address is verified
+    (see docs/H_SERIES.md), so H gets no working write entity at all — not even
+    with the control gate switched on.
+    """
+    return version != SOFTWARE_H
+
+
 def active_write_registers(
-    *, enabled_modules: frozenset[str], include_all_modules: bool = False
+    *, enabled_modules: frozenset[str], include_all_modules: bool = False,
+    version: str | None = None,
 ) -> list[WriteSpec]:
     """Return writable controls active for the enabled modules."""
+    if not writes_supported(version):
+        return []
     out = []
     for ws in WRITE_REGISTERS:
         if ws.module_flag and not include_all_modules and ws.module_flag not in enabled_modules:
             continue
         out.append(ws)
     return out
+
+
+# ==========================================================================
+# Connection validation / capability probing (used by the config flow).
+# ==========================================================================
+
+# NWPM capability probes (J/L/M only). These registers are not documented for
+# H software, so they are never probed there.
+CAPABILITY_PROBES: dict[str, int] = {
+    CAP_ELECTRIC_METER: 5170,
+    CAP_HEAT_METER: 5168,
+    CAP_INVERTER_FREQ: 114,
+}
+
+
+def connection_probe_address(version: str) -> int:
+    """Holding register used to validate the connection for ``version``.
+
+    Uses the documented outdoor-temperature register (1 on J/L/M, 27 on H).
+    """
+    spec = next(s for s in REGISTERS if s.key == "outdoor_temperature")
+    addr = spec.resolve_address(version)
+    if addr is None:  # pragma: no cover - every version maps outdoor temp
+        raise ValueError(f"No probe register for software version {version!r}")
+    return addr
+
+
+def capability_probes(version: str) -> dict[str, int]:
+    """Capability probe registers allowed for ``version`` (none on H)."""
+    if version == SOFTWARE_H:
+        return {}
+    return dict(CAPABILITY_PROBES)

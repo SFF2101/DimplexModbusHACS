@@ -13,7 +13,8 @@ COP, heat-output, flow and energy figures.
 
 - **Register-table driven** (`registers.py`): one source of truth → ~100 read
   entities. Status/lock/fault/sensor-error register **addresses are firmware-
-  version-aware** (H / J / L / M).
+  version-aware** (H / J / L / M). WPM 2006/2007 **H software** (LWPM 410)
+  has its own read-only map — see [`docs/H_SERIES.md`](docs/H_SERIES.md).
 - **Device profiles** (`profiles.py`): LAK9 calibration (Hz→W LUT, EN14511 COP
   table) + a generic profile. Community models = one new profile file.
 - **Capabilities** (per install): electric meter, heat meter, external flow

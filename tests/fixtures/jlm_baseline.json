@@ -1,0 +1,8363 @@
+{
+ "addresses": {
+  "J": {
+   "cooling_flow_temperature": 19,
+   "cooling_primary_return_temperature": 21,
+   "cooling_return_temperature": 20,
+   "dhw_setpoint_temperature": 58,
+   "dhw_temperature": 3,
+   "electrical_power": 5170,
+   "external_lockout": 6,
+   "fault_code": 42,
+   "fault_text": 42,
+   "flow_temperature": 5,
+   "hc2_setpoint_temperature": 54,
+   "hc2_temperature": 9,
+   "hc3_setpoint_temperature": 55,
+   "hc3_temperature": 10,
+   "heat_output_power": 5168,
+   "holiday_days": 5017,
+   "inverter_frequency": 114,
+   "lock_code": 59,
+   "lock_text": 59,
+   "operating_mode": 5015,
+   "outdoor_temperature": 1,
+   "output_2nd_heat_generator": 44,
+   "output_aux_circulation_pump": 49,
+   "output_compressor_1": 41,
+   "output_compressor_2": 42,
+   "output_cooling_pump": 60,
+   "output_dhw_pump": 46,
+   "output_general_fault": 57,
+   "output_heat_cool_changeover": 66,
+   "output_heating_pump_m13": 45,
+   "output_heating_pump_m14": 59,
+   "output_heating_pump_m15": 51,
+   "output_heating_pump_m20": 61,
+   "output_immersion_heater": 50,
+   "output_mixer_m21_close": 48,
+   "output_mixer_m21_open": 47,
+   "output_mixer_m22_close": 53,
+   "output_mixer_m22_open": 52,
+   "output_pool_pump": 56,
+   "output_primary_cooling_pump": 68,
+   "output_primary_pump": 43,
+   "output_solar_pump": 71,
+   "party_hours": 5016,
+   "pv_surplus": 5182,
+   "return_setpoint_temperature": 53,
+   "return_temperature": 2,
+   "room_humidity_1": 13,
+   "room_humidity_2": 14,
+   "room_temperature_1": 11,
+   "room_temperature_2": 12,
+   "runtime_2nd_heat_generator": 75,
+   "runtime_aux_circulation_pump": 71,
+   "runtime_compressor_1": 72,
+   "runtime_compressor_2": 73,
+   "runtime_dhw_pump": 77,
+   "runtime_heating_pump_m13": 76,
+   "runtime_immersion_heater": 78,
+   "runtime_pool_pump": 79,
+   "runtime_primary_pump": 74,
+   "sensor_error_code": null,
+   "sensor_error_text": null,
+   "sg_ready_code": 5167,
+   "sg_ready_text": 5167,
+   "smartgrid_input_1": 3,
+   "smartgrid_input_2": 4,
+   "solar_collector_temperature": 10,
+   "solar_tank_temperature": 23,
+   "source_inlet_temperature": 6,
+   "source_outlet_temperature": 7,
+   "status_code": 43,
+   "status_text": 43,
+   "utility_lockout": 5,
+   "vent_exhaust_air_temperature": 123,
+   "vent_extract_air_temperature": 122,
+   "vent_extract_fan_speed": 126,
+   "vent_level": 5034,
+   "vent_outdoor_air_temperature": 120,
+   "vent_supply_air_temperature": 121,
+   "vent_supply_fan_speed": 125
+  },
+  "L": {
+   "cooling_flow_temperature": 19,
+   "cooling_primary_return_temperature": 21,
+   "cooling_return_temperature": 20,
+   "dhw_setpoint_temperature": 58,
+   "dhw_temperature": 3,
+   "electrical_power": 5170,
+   "external_lockout": 6,
+   "fault_code": 105,
+   "fault_text": 105,
+   "flow_temperature": 5,
+   "hc2_setpoint_temperature": 54,
+   "hc2_temperature": 9,
+   "hc3_setpoint_temperature": 55,
+   "hc3_temperature": 10,
+   "heat_output_power": 5168,
+   "holiday_days": 5017,
+   "inverter_frequency": 114,
+   "lock_code": 104,
+   "lock_text": 104,
+   "operating_mode": 5015,
+   "outdoor_temperature": 1,
+   "output_2nd_heat_generator": 44,
+   "output_aux_circulation_pump": 49,
+   "output_compressor_1": 41,
+   "output_compressor_2": 42,
+   "output_cooling_pump": 60,
+   "output_dhw_pump": 46,
+   "output_general_fault": 57,
+   "output_heat_cool_changeover": 66,
+   "output_heating_pump_m13": 45,
+   "output_heating_pump_m14": 59,
+   "output_heating_pump_m15": 51,
+   "output_heating_pump_m20": 61,
+   "output_immersion_heater": 50,
+   "output_mixer_m21_close": 48,
+   "output_mixer_m21_open": 47,
+   "output_mixer_m22_close": 53,
+   "output_mixer_m22_open": 52,
+   "output_pool_pump": 56,
+   "output_primary_cooling_pump": 68,
+   "output_primary_pump": 43,
+   "output_solar_pump": 71,
+   "party_hours": 5016,
+   "pv_surplus": 5182,
+   "return_setpoint_temperature": 53,
+   "return_temperature": 2,
+   "room_humidity_1": 13,
+   "room_humidity_2": 14,
+   "room_temperature_1": 11,
+   "room_temperature_2": 12,
+   "runtime_2nd_heat_generator": 75,
+   "runtime_aux_circulation_pump": 71,
+   "runtime_compressor_1": 72,
+   "runtime_compressor_2": 73,
+   "runtime_dhw_pump": 77,
+   "runtime_heating_pump_m13": 76,
+   "runtime_immersion_heater": 78,
+   "runtime_pool_pump": 79,
+   "runtime_primary_pump": 74,
+   "sensor_error_code": 106,
+   "sensor_error_text": 106,
+   "sg_ready_code": 5167,
+   "sg_ready_text": 5167,
+   "smartgrid_input_1": 3,
+   "smartgrid_input_2": 4,
+   "solar_collector_temperature": 10,
+   "solar_tank_temperature": 23,
+   "source_inlet_temperature": 6,
+   "source_outlet_temperature": 7,
+   "status_code": 103,
+   "status_text": 103,
+   "utility_lockout": 5,
+   "vent_exhaust_air_temperature": 123,
+   "vent_extract_air_temperature": 122,
+   "vent_extract_fan_speed": 126,
+   "vent_level": 5034,
+   "vent_outdoor_air_temperature": 120,
+   "vent_supply_air_temperature": 121,
+   "vent_supply_fan_speed": 125
+  },
+  "M": {
+   "cooling_flow_temperature": 19,
+   "cooling_primary_return_temperature": 21,
+   "cooling_return_temperature": 20,
+   "dhw_setpoint_temperature": 58,
+   "dhw_temperature": 3,
+   "electrical_power": 5170,
+   "external_lockout": 6,
+   "fault_code": 105,
+   "fault_text": 105,
+   "flow_temperature": 5,
+   "hc2_setpoint_temperature": 54,
+   "hc2_temperature": 9,
+   "hc3_setpoint_temperature": 55,
+   "hc3_temperature": 10,
+   "heat_output_power": 5168,
+   "holiday_days": 5017,
+   "inverter_frequency": 114,
+   "lock_code": 104,
+   "lock_text": 104,
+   "operating_mode": 5015,
+   "outdoor_temperature": 1,
+   "output_2nd_heat_generator": 44,
+   "output_aux_circulation_pump": 49,
+   "output_compressor_1": 41,
+   "output_compressor_2": 42,
+   "output_cooling_pump": 60,
+   "output_dhw_pump": 46,
+   "output_general_fault": 57,
+   "output_heat_cool_changeover": 66,
+   "output_heating_pump_m13": 45,
+   "output_heating_pump_m14": 59,
+   "output_heating_pump_m15": 51,
+   "output_heating_pump_m20": 61,
+   "output_immersion_heater": 50,
+   "output_mixer_m21_close": 48,
+   "output_mixer_m21_open": 47,
+   "output_mixer_m22_close": 53,
+   "output_mixer_m22_open": 52,
+   "output_pool_pump": 56,
+   "output_primary_cooling_pump": 68,
+   "output_primary_pump": 43,
+   "output_solar_pump": 71,
+   "party_hours": 5016,
+   "pv_surplus": 5182,
+   "return_setpoint_temperature": 53,
+   "return_temperature": 2,
+   "room_humidity_1": 13,
+   "room_humidity_2": 14,
+   "room_temperature_1": 11,
+   "room_temperature_2": 12,
+   "runtime_2nd_heat_generator": 75,
+   "runtime_aux_circulation_pump": 71,
+   "runtime_compressor_1": 72,
+   "runtime_compressor_2": 73,
+   "runtime_dhw_pump": 77,
+   "runtime_heating_pump_m13": 76,
+   "runtime_immersion_heater": 78,
+   "runtime_pool_pump": 79,
+   "runtime_primary_pump": 74,
+   "sensor_error_code": 106,
+   "sensor_error_text": 106,
+   "sg_ready_code": 5167,
+   "sg_ready_text": 5167,
+   "smartgrid_input_1": 3,
+   "smartgrid_input_2": 4,
+   "solar_collector_temperature": 10,
+   "solar_tank_temperature": 23,
+   "source_inlet_temperature": 6,
+   "source_outlet_temperature": 7,
+   "status_code": 103,
+   "status_text": 103,
+   "utility_lockout": 5,
+   "vent_exhaust_air_temperature": 123,
+   "vent_extract_air_temperature": 122,
+   "vent_extract_fan_speed": 126,
+   "vent_level": 5034,
+   "vent_outdoor_air_temperature": 120,
+   "vent_supply_air_temperature": 121,
+   "vent_supply_fan_speed": 125
+  }
+ },
+ "energy_groups": [
+  [
+   "energy_heating",
+   [
+    5096,
+    5097,
+    5098
+   ],
+   "energy",
+   "heat_meter"
+  ],
+  [
+   "energy_dhw",
+   [
+    5099,
+    5100,
+    5101
+   ],
+   "energy",
+   "heat_meter"
+  ],
+  [
+   "energy_pool",
+   [
+    5102,
+    5103,
+    5104
+   ],
+   "pool",
+   "heat_meter"
+  ],
+  [
+   "energy_environment",
+   [
+    5127,
+    5128,
+    5129
+   ],
+   "energy",
+   "heat_meter"
+  ]
+ ],
+ "enum_maps": {
+  "J": {
+   "fault": {
+    "0": "No fault",
+    "1": "Fault N17.1",
+    "10": "Frost protection sensor short or open circuit",
+    "11": "2nd heating circuit sensor short or open circuit",
+    "12": "Anti-freeze sensor short or open circuit",
+    "13": "Low pressure brine",
+    "14": "Motor protection primary",
+    "15": "Flow",
+    "16": "Domestic hot water",
+    "17": "High pressure",
+    "19": "Hot gas thermostat",
+    "2": "Fault N17.2",
+    "20": "Cooling operating limit",
+    "21": "Reserved",
+    "22": "Reserved",
+    "23": "Temperature difference",
+    "24": "Reserved",
+    "25": "Reserved",
+    "26": "Reserved",
+    "28": "Reserved",
+    "29": "Reserved",
+    "3": "Compressor load",
+    "30": "Reserved",
+    "31": "Reserved",
+    "32": "Reserved",
+    "4": "Coding",
+    "5": "Low pressure",
+    "6": "Frost protection",
+    "7": "Outdoor sensor short or open circuit",
+    "8": "Return sensor short or open circuit",
+    "9": "Domestic hot water sensor short or open circuit"
+   },
+   "lock": {
+    "0": "No lock",
+    "1": "Outdoor temperature",
+    "10": "Low pressure",
+    "11": "Flow",
+    "12": "Soft starter",
+    "13": "Reserved",
+    "14": "Reserved",
+    "15": "Reserved",
+    "16": "Reserved",
+    "17": "Reserved",
+    "18": "Reserved",
+    "19": "Reserved",
+    "2": "Heat pump operating limit",
+    "20": "Reserved",
+    "21": "Reserved",
+    "23": "Reserved",
+    "24": "Reserved",
+    "25": "Reserved",
+    "29": "Reserved",
+    "3": "Regenerative",
+    "31": "Reserved",
+    "33": "Reserved",
+    "34": "Reserved",
+    "35": "Reserved",
+    "36": "Pump pre-run",
+    "37": "Minimum standstill time",
+    "38": "Grid load limitation",
+    "39": "Anti short-cycling lock",
+    "4": "Reserved",
+    "40": "Heat source operating limit",
+    "41": "External lock",
+    "42": "Second heat generator",
+    "43": "Fault (see fault register)",
+    "5": "Domestic hot water post-heating",
+    "6": "System check",
+    "7": "Utility (EVU) lockout",
+    "8": "Reserved",
+    "9": "High pressure"
+   },
+   "operating_mode": {
+    "0": "Summer",
+    "1": "Winter",
+    "2": "Holiday",
+    "3": "Party",
+    "4": "2nd heat generator",
+    "5": "Cooling"
+   },
+   "sensor_error": {
+    "0": "All sensors OK"
+   },
+   "sg_ready": {
+    "0": "Hardware",
+    "10": "Yellow",
+    "11": "Green",
+    "12": "Red",
+    "13": "Deep Green"
+   },
+   "status": {
+    "0": "Off",
+    "1": "Heat pump on – heating",
+    "10": "Lock (see lock register for J software)",
+    "11": "Lower operating limit",
+    "12": "Low-pressure limit",
+    "13": "Low-pressure shutdown",
+    "14": "High-pressure safety",
+    "15": "Anti short-cycling lock",
+    "16": "Minimum standstill time",
+    "17": "Grid load limitation",
+    "18": "Flow monitoring",
+    "19": "Second heat generator active",
+    "2": "Heat pump on – heating",
+    "20": "Low-pressure (brine/source)",
+    "21": "Heat pump on – defrost",
+    "22": "Upper operating limit",
+    "23": "External lock",
+    "24": "Cooling operating mode",
+    "25": "Frost protection (cooling)",
+    "26": "Flow temperature limit",
+    "27": "Dew point monitor",
+    "28": "Dew point",
+    "29": "Reserved",
+    "3": "Heat pump on – swimming pool",
+    "30": "Reserved",
+    "4": "Heat pump on – domestic hot water",
+    "5": "Heat pump on – heating + 2nd heat generator",
+    "6": "Heat pump on – swimming pool + 2nd heat generator",
+    "7": "Heat pump on – domestic hot water + 2nd heat generator",
+    "8": "Primary pump pre-run",
+    "9": "Heating purge"
+   }
+  },
+  "L": {
+   "fault": {
+    "0": "No fault",
+    "1": "Fault N17.1",
+    "10": "WPIO",
+    "11": "Reserved",
+    "12": "Inverter",
+    "13": "WQIF",
+    "14": "Reserved",
+    "15": "Sensor fault",
+    "16": "Low pressure brine",
+    "17": "Reserved",
+    "19": "Primary circuit fault",
+    "2": "Fault N17.2",
+    "20": "Defrost fault",
+    "21": "Low pressure brine fault",
+    "22": "Domestic hot water fault",
+    "23": "Compressor load fault",
+    "24": "Coding fault",
+    "25": "Low pressure fault",
+    "26": "Frost protection fault",
+    "28": "High pressure fault",
+    "29": "Temperature difference fault",
+    "3": "Fault N17.3",
+    "30": "Hot gas thermostat fault",
+    "31": "Flow fault",
+    "32": "Warm-up fault",
+    "4": "Fault N17.4",
+    "5": "Reserved",
+    "6": "Electronic expansion valve",
+    "7": "Reserved",
+    "8": "Reserved",
+    "9": "Reserved"
+   },
+   "lock": {
+    "0": "No lock",
+    "1": "High temperature operating limit",
+    "10": "Minimum standstill time",
+    "11": "Grid load limitation",
+    "12": "Anti short-cycling lock",
+    "13": "Domestic hot water post-heating",
+    "14": "Regenerative",
+    "15": "Utility (EVU) lockout",
+    "16": "Soft starter",
+    "17": "Flow",
+    "18": "Heat pump operating limit",
+    "19": "High pressure",
+    "2": "Volume flow",
+    "20": "Low pressure",
+    "21": "Heat source operating limit",
+    "23": "System limit",
+    "24": "Primary circuit load",
+    "25": "External lock",
+    "29": "Inverter",
+    "3": "Reserved",
+    "31": "Warm-up",
+    "33": "EvD initialization",
+    "34": "Second heat generator enabled",
+    "35": "Fault (see fault register)",
+    "36": "Reserved",
+    "37": "Reserved",
+    "38": "Reserved",
+    "39": "Reserved",
+    "4": "Reserved",
+    "40": "Reserved",
+    "41": "Reserved",
+    "42": "Reserved",
+    "43": "Reserved",
+    "5": "Function check",
+    "6": "High temperature operating limit",
+    "7": "System check",
+    "8": "Delay switching to cooling",
+    "9": "Pump pre-run"
+   },
+   "operating_mode": {
+    "0": "Summer",
+    "1": "Winter",
+    "2": "Holiday",
+    "3": "Party",
+    "4": "2nd heat generator",
+    "5": "Cooling"
+   },
+   "sensor_error": {
+    "0": "All sensors OK",
+    "1": "Outdoor sensor (R1)",
+    "10": "Room sensor 2",
+    "11": "Heat source outlet sensor (R6)",
+    "12": "Heat source inlet sensor (R24)",
+    "14": "Collector sensor (R23)",
+    "15": "Low-pressure sensor (R25)",
+    "16": "High-pressure sensor (R26)",
+    "17": "Room humidity 1",
+    "18": "Room humidity 2",
+    "19": "Frost protection cooling sensor",
+    "2": "Return sensor (R2)",
+    "20": "Hot gas",
+    "21": "Return sensor (R2.1)",
+    "22": "Swimming pool sensor (R20)",
+    "23": "Flow sensor passive cooling (R11)",
+    "24": "Return sensor passive cooling (R4)",
+    "26": "Solar storage sensor (R22)",
+    "28": "Heating demand sensor (R2.2)",
+    "29": "RTM Econ",
+    "3": "Domestic hot water sensor (R3)",
+    "30": "Cooling demand sensor (R39)",
+    "4": "Coding (R7)",
+    "5": "Flow sensor (R9)",
+    "6": "2nd heating circuit sensor (R5)",
+    "7": "3rd heating circuit sensor (R13)",
+    "8": "Regenerative sensor (R13)",
+    "9": "Room sensor 1"
+   },
+   "sg_ready": {
+    "0": "Hardware",
+    "10": "Yellow",
+    "11": "Green",
+    "12": "Red",
+    "13": "Deep Green"
+   },
+   "status": {
+    "0": "Off",
+    "1": "Off",
+    "10": "Defrost",
+    "11": "Flow monitoring",
+    "12": "Reserved",
+    "13": "Reserved",
+    "14": "Reserved",
+    "15": "Reserved",
+    "16": "Reserved",
+    "17": "Reserved",
+    "18": "Reserved",
+    "19": "Reserved",
+    "2": "Heating",
+    "20": "Reserved",
+    "21": "Reserved",
+    "22": "Reserved",
+    "23": "Reserved",
+    "24": "Operating mode switch delay",
+    "25": "Reserved",
+    "26": "Reserved",
+    "27": "Reserved",
+    "28": "Reserved",
+    "29": "Passive cooling",
+    "3": "Swimming pool",
+    "30": "Lock (see lock register)",
+    "4": "Domestic hot water",
+    "5": "Cooling",
+    "6": "Reserved",
+    "7": "Reserved",
+    "8": "Reserved",
+    "9": "Reserved"
+   }
+  },
+  "M": {
+   "fault": {
+    "0": "No fault",
+    "1": "Fault N17.1",
+    "10": "WPIO",
+    "11": "Reserved",
+    "12": "Inverter",
+    "13": "WQIF",
+    "14": "Reserved",
+    "15": "Sensor fault",
+    "16": "Low pressure brine",
+    "17": "Reserved",
+    "19": "Primary circuit fault",
+    "2": "Fault N17.2",
+    "20": "Defrost fault",
+    "21": "Low pressure brine fault",
+    "22": "Domestic hot water fault",
+    "23": "Compressor load fault",
+    "24": "Coding fault",
+    "25": "Low pressure fault",
+    "26": "Frost protection fault",
+    "28": "High pressure fault",
+    "29": "Temperature difference fault",
+    "3": "Fault N17.3",
+    "30": "Hot gas thermostat fault",
+    "31": "Flow fault",
+    "32": "Warm-up fault",
+    "4": "Fault N17.4",
+    "5": "Reserved",
+    "6": "Electronic expansion valve",
+    "7": "Reserved",
+    "8": "Reserved",
+    "9": "Reserved"
+   },
+   "lock": {
+    "0": "No lock",
+    "1": "High temperature operating limit",
+    "10": "Minimum standstill time",
+    "11": "Grid load limitation",
+    "12": "Anti short-cycling lock",
+    "13": "Domestic hot water post-heating",
+    "14": "Regenerative",
+    "15": "Utility (EVU) lockout",
+    "16": "Soft starter",
+    "17": "Flow",
+    "18": "Heat pump operating limit",
+    "19": "High pressure",
+    "2": "Volume flow",
+    "20": "Low pressure",
+    "21": "Heat source operating limit",
+    "23": "System limit",
+    "24": "Primary circuit load",
+    "25": "External lock",
+    "29": "Inverter",
+    "3": "Reserved",
+    "31": "Warm-up",
+    "33": "EvD initialization",
+    "34": "Second heat generator enabled",
+    "35": "Fault (see fault register)",
+    "36": "Reserved",
+    "37": "Reserved",
+    "38": "Reserved",
+    "39": "Reserved",
+    "4": "Reserved",
+    "40": "Reserved",
+    "41": "Reserved",
+    "42": "Reserved",
+    "43": "Reserved",
+    "5": "Function check",
+    "6": "High temperature operating limit",
+    "7": "System check",
+    "8": "Delay switching to cooling",
+    "9": "Pump pre-run"
+   },
+   "operating_mode": {
+    "0": "Summer",
+    "1": "Winter",
+    "2": "Holiday",
+    "3": "Party",
+    "4": "2nd heat generator",
+    "5": "Cooling"
+   },
+   "sensor_error": {
+    "0": "All sensors OK",
+    "1": "Outdoor sensor (R1)",
+    "10": "Room sensor 2",
+    "11": "Heat source outlet sensor (R6)",
+    "12": "Heat source inlet sensor (R24)",
+    "14": "Collector sensor (R23)",
+    "15": "Low-pressure sensor (R25)",
+    "16": "High-pressure sensor (R26)",
+    "17": "Room humidity 1",
+    "18": "Room humidity 2",
+    "19": "Frost protection cooling sensor",
+    "2": "Return sensor (R2)",
+    "20": "Hot gas",
+    "21": "Return sensor (R2.1)",
+    "22": "Swimming pool sensor (R20)",
+    "23": "Flow sensor passive cooling (R11)",
+    "24": "Return sensor passive cooling (R4)",
+    "26": "Solar storage sensor (R22)",
+    "28": "Heating demand sensor (R2.2)",
+    "29": "RTM Econ",
+    "3": "Domestic hot water sensor (R3)",
+    "30": "Cooling demand sensor (R39)",
+    "4": "Coding (R7)",
+    "5": "Flow sensor (R9)",
+    "6": "2nd heating circuit sensor (R5)",
+    "7": "3rd heating circuit sensor (R13)",
+    "8": "Regenerative sensor (R13)",
+    "9": "Room sensor 1"
+   },
+   "sg_ready": {
+    "0": "Hardware",
+    "10": "Yellow",
+    "11": "Green",
+    "12": "Red",
+    "13": "Deep Green"
+   },
+   "status": {
+    "0": "Off",
+    "1": "Off",
+    "10": "Defrost",
+    "11": "Flow monitoring",
+    "12": "Reserved",
+    "13": "Reserved",
+    "14": "Reserved",
+    "15": "Reserved",
+    "16": "Reserved",
+    "17": "Reserved",
+    "18": "Reserved",
+    "19": "Reserved",
+    "2": "Heating",
+    "20": "Reserved",
+    "21": "Reserved",
+    "22": "Reserved",
+    "23": "Reserved",
+    "24": "Operating mode switch delay",
+    "25": "Reserved",
+    "26": "Reserved",
+    "27": "Reserved",
+    "28": "Reserved",
+    "29": "Passive cooling",
+    "3": "Swimming pool",
+    "30": "Lock (see lock register)",
+    "4": "Domestic hot water",
+    "5": "Cooling",
+    "6": "Reserved",
+    "7": "Reserved",
+    "8": "Reserved",
+    "9": "Reserved"
+   }
+  }
+ },
+ "plans": {
+  "J|all|all|re=False|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5096,
+     9
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "J|all|all|re=False|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     16
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "J|all|all|re=True|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     114,
+     13
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5096,
+     9
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "J|all|all|re=True|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     114,
+     13
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     16
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "J|all|none|re=False|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "J|all|none|re=False|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     1
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "J|all|none|re=True|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "J|all|none|re=True|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     1
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "J|core|all|re=False|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "J|core|all|re=False|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "J|core|all|re=True|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     114,
+     1
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "J|core|all|re=True|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     114,
+     1
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "J|core|none|re=False|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "J|core|none|re=False|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "J|core|none|re=True|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     2
+    ],
+    [
+     "holding",
+     53,
+     7
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "J|core|none|re=True|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     42,
+     18
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "L|all|all|re=False|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5096,
+     9
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "L|all|all|re=False|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     16
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "L|all|all|re=True|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     24
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5096,
+     9
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "L|all|all|re=True|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     24
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     16
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "L|all|none|re=False|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "L|all|none|re=False|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     1
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "L|all|none|re=True|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "L|all|none|re=True|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     1
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "L|core|all|re=False|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "L|core|all|re=False|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "L|core|all|re=True|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     12
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "L|core|all|re=True|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     12
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "L|core|none|re=False|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "L|core|none|re=False|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "L|core|none|re=True|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "L|core|none|re=True|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "M|all|all|re=False|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5096,
+     9
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "M|all|all|re=False|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     16
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "M|all|all|re=True|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     24
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5096,
+     9
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "M|all|all|re=True|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     24
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     16
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "M|all|none|re=False|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "M|all|none|re=False|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     1
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "M|all|none|re=True|ctrl=False": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": []
+  },
+  "M|all|none|re=True|ctrl=True": {
+   "keys": [
+    "cooling_flow_temperature",
+    "cooling_primary_return_temperature",
+    "cooling_return_temperature",
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "hc2_setpoint_temperature",
+    "hc2_temperature",
+    "hc3_setpoint_temperature",
+    "hc3_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_cooling_pump",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heat_cool_changeover",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m15",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_mixer_m21_close",
+    "output_mixer_m21_open",
+    "output_mixer_m22_close",
+    "output_mixer_m22_open",
+    "output_pool_pump",
+    "output_primary_cooling_pump",
+    "output_primary_pump",
+    "output_solar_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_pool_pump",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "solar_collector_temperature",
+    "solar_tank_temperature",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout",
+    "vent_exhaust_air_temperature",
+    "vent_extract_air_temperature",
+    "vent_extract_fan_speed",
+    "vent_level",
+    "vent_outdoor_air_temperature",
+    "vent_supply_air_temperature",
+    "vent_supply_fan_speed"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     23
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     9
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     120,
+     7
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5034,
+     5
+    ],
+    [
+     "holding",
+     5047,
+     5
+    ],
+    [
+     "holding",
+     5089,
+     1
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     31
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_pool_setpoint",
+    "set_hc23_cooling_setpoint",
+    "set_operating_mode"
+   ]
+  },
+  "M|core|all|re=False|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "M|core|all|re=False|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "M|core|all|re=True|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     12
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "M|core|all|re=True|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "electrical_power",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "heat_output_power",
+    "holiday_days",
+    "inverter_frequency",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "pv_surplus",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     12
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5096,
+     6
+    ],
+    [
+     "holding",
+     5127,
+     3
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     4
+    ],
+    [
+     "holding",
+     5182,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "M|core|none|re=False|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "M|core|none|re=False|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  },
+  "M|core|none|re=True|ctrl=False": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     53,
+     6
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": []
+  },
+  "M|core|none|re=True|ctrl=True": {
+   "keys": [
+    "dhw_setpoint_temperature",
+    "dhw_temperature",
+    "external_lockout",
+    "fault_code",
+    "fault_text",
+    "flow_temperature",
+    "holiday_days",
+    "lock_code",
+    "lock_text",
+    "operating_mode",
+    "outdoor_temperature",
+    "output_2nd_heat_generator",
+    "output_aux_circulation_pump",
+    "output_compressor_1",
+    "output_compressor_2",
+    "output_dhw_pump",
+    "output_general_fault",
+    "output_heating_pump_m13",
+    "output_heating_pump_m14",
+    "output_heating_pump_m20",
+    "output_immersion_heater",
+    "output_primary_pump",
+    "party_hours",
+    "return_setpoint_temperature",
+    "return_temperature",
+    "room_humidity_1",
+    "room_humidity_2",
+    "room_temperature_1",
+    "room_temperature_2",
+    "runtime_2nd_heat_generator",
+    "runtime_aux_circulation_pump",
+    "runtime_compressor_1",
+    "runtime_compressor_2",
+    "runtime_dhw_pump",
+    "runtime_heating_pump_m13",
+    "runtime_immersion_heater",
+    "runtime_primary_pump",
+    "sensor_error_code",
+    "sensor_error_text",
+    "sg_ready_code",
+    "sg_ready_text",
+    "smartgrid_input_1",
+    "smartgrid_input_2",
+    "source_inlet_temperature",
+    "source_outlet_temperature",
+    "status_code",
+    "status_text",
+    "utility_lockout"
+   ],
+   "plan": [
+    [
+     "holding",
+     1,
+     14
+    ],
+    [
+     "holding",
+     46,
+     13
+    ],
+    [
+     "holding",
+     71,
+     8
+    ],
+    [
+     "holding",
+     103,
+     4
+    ],
+    [
+     "holding",
+     5015,
+     3
+    ],
+    [
+     "holding",
+     5036,
+     3
+    ],
+    [
+     "holding",
+     5047,
+     2
+    ],
+    [
+     "holding",
+     5145,
+     1
+    ],
+    [
+     "holding",
+     5167,
+     1
+    ],
+    [
+     "coil",
+     3,
+     4
+    ],
+    [
+     "coil",
+     41,
+     21
+    ]
+   ],
+   "writes": [
+    "set_dhw_setpoint",
+    "set_dhw_setpoint_min",
+    "set_dhw_setpoint_max",
+    "set_hc1_room_setpoint",
+    "set_hc1_fixed_flow",
+    "set_hc1_curve_end",
+    "set_hc1_curve_offset",
+    "set_operating_mode"
+   ]
+  }
+ },
+ "source_commit": "a76937c3513627de2898d9514909722ffc5cf06c",
+ "spec_meta": {
+  "cooling_flow_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "cooling",
+   "module_flag": "cooling",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "cooling_primary_return_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "cooling",
+   "module_flag": "cooling",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "cooling_return_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "cooling",
+   "module_flag": "cooling",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "dhw_setpoint_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "dhw",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "dhw_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "dhw",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "electrical_power": {
+   "capability": "electric_meter",
+   "device_class": "power",
+   "entity_category": null,
+   "enum": null,
+   "module": "energy",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.01,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "kW"
+  },
+  "external_lockout": {
+   "capability": null,
+   "device_class": "lock",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "fault_code": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "fault_text": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": "fault",
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "flow_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "hc2_setpoint_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "hc2_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "hc3_setpoint_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "hc3_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "heat_output_power": {
+   "capability": "heat_meter",
+   "device_class": "power",
+   "entity_category": null,
+   "enum": null,
+   "module": "energy",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.01,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "kW"
+  },
+  "holiday_days": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "measurement",
+   "unit": "d"
+  },
+  "inverter_frequency": {
+   "capability": "inverter_freq",
+   "device_class": "frequency",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": true,
+   "scale": 0.1,
+   "signed": false,
+   "state_class": "measurement",
+   "unit": "Hz"
+  },
+  "lock_code": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "lock_text": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": "lock",
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "operating_mode": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": "operating_mode",
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "outdoor_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "output_2nd_heat_generator": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_aux_circulation_pump": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_compressor_1": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_compressor_2": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_cooling_pump": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "cooling",
+   "module_flag": "cooling",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_dhw_pump": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "dhw",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_general_fault": {
+   "capability": null,
+   "device_class": "problem",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_heat_cool_changeover": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "cooling",
+   "module_flag": "cooling",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_heating_pump_m13": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_heating_pump_m14": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_heating_pump_m15": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_heating_pump_m20": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_immersion_heater": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_mixer_m21_close": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_mixer_m21_open": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_mixer_m22_close": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_mixer_m22_open": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc2_3",
+   "module_flag": "hc2_3",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_pool_pump": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "pool",
+   "module_flag": "pool",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_primary_cooling_pump": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "cooling",
+   "module_flag": "cooling",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_primary_pump": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "output_solar_pump": {
+   "capability": null,
+   "device_class": "running",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "solar",
+   "module_flag": "solar",
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "party_hours": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "measurement",
+   "unit": "h"
+  },
+  "pv_surplus": {
+   "capability": "electric_meter",
+   "device_class": "power",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "energy",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.01,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "kW"
+  },
+  "return_setpoint_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "return_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "room_humidity_1": {
+   "capability": null,
+   "device_class": "humidity",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "%"
+  },
+  "room_humidity_2": {
+   "capability": null,
+   "device_class": "humidity",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "%"
+  },
+  "room_temperature_1": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "room_temperature_2": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "runtime_2nd_heat_generator": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_aux_circulation_pump": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_compressor_1": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_compressor_2": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_dhw_pump": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "dhw",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_heating_pump_m13": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "hc1",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_immersion_heater": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_pool_pump": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "pool",
+   "module_flag": "pool",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "runtime_primary_pump": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "total_increasing",
+   "unit": "h"
+  },
+  "sensor_error_code": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "sensor_error_text": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": "sensor_error",
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "sg_ready_code": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "sg_ready_text": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": "sg_ready",
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "smartgrid_input_1": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "smartgrid_input_2": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "solar_collector_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "solar",
+   "module_flag": "solar",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "solar_tank_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "solar",
+   "module_flag": "solar",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "source_inlet_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "source",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "source_outlet_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "source",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "status_code": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "status_text": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": "status",
+   "module": "controller",
+   "module_flag": null,
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "utility_lockout": {
+   "capability": null,
+   "device_class": "lock",
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "controller",
+   "module_flag": null,
+   "obj": "coil",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": null,
+   "unit": null
+  },
+  "vent_exhaust_air_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "vent",
+   "module_flag": "vent",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "vent_extract_air_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "vent",
+   "module_flag": "vent",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "vent_extract_fan_speed": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": null,
+   "module": "vent",
+   "module_flag": "vent",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "rpm"
+  },
+  "vent_level": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": "diagnostic",
+   "enum": null,
+   "module": "vent",
+   "module_flag": "vent",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": false,
+   "state_class": "measurement",
+   "unit": null
+  },
+  "vent_outdoor_air_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "vent",
+   "module_flag": "vent",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "vent_supply_air_temperature": {
+   "capability": null,
+   "device_class": "temperature",
+   "entity_category": null,
+   "enum": null,
+   "module": "vent",
+   "module_flag": "vent",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 0.1,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "°C"
+  },
+  "vent_supply_fan_speed": {
+   "capability": null,
+   "device_class": null,
+   "entity_category": null,
+   "enum": null,
+   "module": "vent",
+   "module_flag": "vent",
+   "obj": "holding",
+   "re_only": false,
+   "scale": 1.0,
+   "signed": true,
+   "state_class": "measurement",
+   "unit": "rpm"
+  }
+ },
+ "write_encoding": {
+  "set_dhw_setpoint": [
+   10,
+   48,
+   85
+  ],
+  "set_dhw_setpoint_max": [
+   10,
+   48,
+   85
+  ],
+  "set_dhw_setpoint_min": [
+   10,
+   48,
+   85
+  ],
+  "set_hc1_curve_end": [
+   20,
+   45,
+   70
+  ],
+  "set_hc1_curve_offset": [
+   0,
+   19,
+   38
+  ],
+  "set_hc1_fixed_flow": [
+   18,
+   39,
+   60
+  ],
+  "set_hc1_room_setpoint": [
+   15,
+   22,
+   30
+  ],
+  "set_hc23_cooling_setpoint": [
+   0,
+   15,
+   30
+  ],
+  "set_pool_setpoint": [
+   5,
+   32,
+   60
+  ]
+ },
+ "write_specs": [
+  [
+   "set_dhw_setpoint",
+   5047,
+   "number",
+   10,
+   85,
+   1.0,
+   null,
+   null
+  ],
+  [
+   "set_dhw_setpoint_min",
+   5145,
+   "number",
+   10,
+   85,
+   1.0,
+   null,
+   null
+  ],
+  [
+   "set_dhw_setpoint_max",
+   5048,
+   "number",
+   10,
+   85,
+   1.0,
+   null,
+   null
+  ],
+  [
+   "set_hc1_room_setpoint",
+   46,
+   "number",
+   15,
+   30,
+   1,
+   null,
+   null
+  ],
+  [
+   "set_hc1_fixed_flow",
+   5037,
+   "number",
+   18,
+   60,
+   1.0,
+   null,
+   null
+  ],
+  [
+   "set_hc1_curve_end",
+   5038,
+   "number",
+   20,
+   70,
+   1.0,
+   null,
+   null
+  ],
+  [
+   "set_hc1_curve_offset",
+   5036,
+   "number",
+   -19,
+   19,
+   1,
+   "offset19",
+   null
+  ],
+  [
+   "set_pool_setpoint",
+   5051,
+   "number",
+   5,
+   60,
+   1.0,
+   null,
+   "pool"
+  ],
+  [
+   "set_hc23_cooling_setpoint",
+   5089,
+   "number",
+   15,
+   30,
+   0.5,
+   "cool_setpoint",
+   "hc2_3"
+  ],
+  [
+   "set_operating_mode",
+   5015,
+   "select",
+   0.0,
+   0.0,
+   1.0,
+   null,
+   null
+  ]
+ ]
+}

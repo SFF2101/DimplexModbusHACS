@@ -219,7 +219,7 @@ LOCK_MAP_J: Final = {
 
 LOCK_MAP_H: Final = {
     0: "No lock",
-    1: "Reserved",
+    1: "Outdoor temperature",  # wiki Sperrmeldungen, H column: "Außentemperatur"
     2: "Bivalent alternative",
     3: "Bivalent regenerative",
     4: "Return temperature",
@@ -326,6 +326,13 @@ FAULT_MAP_HJ: Final = {
     32: "Reserved",
 }
 
+# H software, per the official wiki (Statusmeldungen / Störmeldungen, "H/J"
+# column). Differs from the shared *_HJ maps, which carry two L/M-column
+# values: status 29 is "Kühlen passiv" and fault codes 1/2 (N17.1/N17.2) do
+# not exist on H. The *_HJ maps are left unchanged for J (regression-safe).
+STATUS_MAP_H: Final = {**STATUS_MAP_HJ, 29: "Passive cooling"}
+FAULT_MAP_H: Final = {k: v for k, v in FAULT_MAP_HJ.items() if k not in (1, 2)}
+
 SENSOR_ERROR_MAP_LM: Final = {
     0: "All sensors OK",
     1: "Outdoor sensor (R1)",
@@ -372,7 +379,7 @@ SG_READY_MAP: Final = {
 SG_READY_REVERSE: Final = {value: key for key, value in SG_READY_MAP.items()}
 
 STATUS_MAP_BY_VERSION: Final = {
-    "H": STATUS_MAP_HJ,
+    "H": STATUS_MAP_H,
     "J": STATUS_MAP_HJ,
     "L": STATUS_MAP_LM,
     "M": STATUS_MAP_LM,
@@ -384,7 +391,7 @@ LOCK_MAP_BY_VERSION: Final = {
     "M": LOCK_MAP_LM,
 }
 FAULT_MAP_BY_VERSION: Final = {
-    "H": FAULT_MAP_HJ,
+    "H": FAULT_MAP_H,
     "J": FAULT_MAP_HJ,
     "L": FAULT_MAP_LM,
     "M": FAULT_MAP_LM,

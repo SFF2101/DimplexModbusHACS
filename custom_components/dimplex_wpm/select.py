@@ -20,7 +20,7 @@ from .const import (
 )
 from .device import build_device_info
 from .entity import DimplexEntityMixin
-from .registers import KIND_SELECT, WriteSpec
+from .registers import KIND_SELECT, WriteSpec, writes_supported
 
 PARALLEL_UPDATES = 1  # serialize writes to the controller
 
@@ -35,11 +35,13 @@ async def async_setup_entry(
     coordinator = data["coordinator"]
     allow_write = data.get(CONF_ENABLE_WRITE_ENTITIES, DEFAULT_ENABLE_WRITE)
 
-    if not allow_write:
+    version = coordinator.software_version
+    # No heat-pump write entity at all on firmware without verified write
+    # addresses (H software): SG Ready register 5167 is NWPM-only.
+    if not allow_write or not writes_supported(version):
         return
 
     host = data.get("host")
-    version = coordinator.software_version
     model = data.get("model")
 
     entities: list[SelectEntity] = [

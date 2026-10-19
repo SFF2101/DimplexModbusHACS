@@ -13,7 +13,7 @@ from homeassistant.util import dt as dt_util
 
 from . import estimation as est
 from .const import DEFAULT_SCAN_INTERVAL, get_enum_map
-from .modbus_client import DimplexModbusClient
+from .modbus_client import DimplexModbusClient, execute_read_plan
 from .profiles import DeviceProfile
 from .registers import (
     CAP_ELECTRIC_METER,
@@ -21,13 +21,13 @@ from .registers import (
     CAP_HEAT_METER,
     CAP_INVERTER_FREQ,
     COIL,
-    HOLDING,
     active_energy_groups,
     active_registers,
     active_write_registers,
     build_read_plan,
     decode_value,
     energy_total_kwh,
+    read_cluster_gap,
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -94,15 +94,19 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             include_re=include_re,
         )
         self.energy_groups = active_energy_groups(
-            enabled_modules=enabled_modules, capabilities=capabilities
+            enabled_modules=enabled_modules, capabilities=capabilities,
+            version=software_version,
         )
         self.enable_control = enable_control
         self.write_specs = (
-            active_write_registers(enabled_modules=enabled_modules) if enable_control else []
+            active_write_registers(enabled_modules=enabled_modules, version=software_version)
+            if enable_control
+            else []
         )
         extra_holding = {ws.address for ws in self.write_specs}
         self._plan = build_read_plan(
-            self.specs, self.energy_groups, software_version, extra_holding
+            self.specs, self.energy_groups, software_version, extra_holding,
+            cluster_gap=read_cluster_gap(software_version),
         )
 
         self._connection_info = {
@@ -113,6 +117,7 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             "profile": profile.key,
         }
         self._consecutive_failures = 0
+        self._failed_chunks = 0
 
     async def _async_update_data(self) -> dict[str, Any]:
         try:
@@ -163,6 +168,8 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             "last_update": dt_util.utcnow().isoformat(),
             "update_success": True,
             "consecutive_failures": self._consecutive_failures,
+            "failed_read_chunks": self._failed_chunks,
+            "read_plan": [list(chunk) for chunk in self._plan],
             **self._connection_info,
         }
         return {"values": values, "raw_holding": holding, "raw_coils": coils, "meta": meta}
@@ -265,19 +272,9 @@ class DimplexDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             return None
 
     async def _execute_plan(self) -> tuple[dict[int, int], dict[int, bool]]:
-        holding: dict[int, int] = {}
-        coils: dict[int, bool] = {}
-        for obj, start, count in self._plan:
-            if obj == HOLDING:
-                data = await self._client.read_holding_registers(start, count)
-                if data:
-                    for offset, value in enumerate(data):
-                        holding[start + offset] = value
-            elif obj == COIL:
-                bits = await self._client.read_coils(start, count)
-                if bits:
-                    for offset, value in enumerate(bits):
-                        coils[start + offset] = bool(value)
+        # Partial failures (one unsupported/timed-out chunk) leave the other
+        # entities updating; only a total failure fails the update.
+        holding, coils, self._failed_chunks = await execute_read_plan(self._client, self._plan)
         return holding, coils
 
     @property
